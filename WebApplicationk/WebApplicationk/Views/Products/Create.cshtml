@@ -1,0 +1,61 @@
+﻿@model WebApplicationk.Models.Products
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Products</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" id="form-test">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProductName" class="control-label"></label>
+                <input asp-for="ProductName" class="form-control" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductDetails" class="control-label"></label>
+                @*<input asp-for="ProductDetails" class="form-control" />*@
+                <textarea class="form-control" name="txtCK">                
+            </textarea>
+                <input type="hidden" asp-for="ProductDetails" class="text-temp" />
+                <span asp-validation-for="ProductDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        var editor = CKEDITOR.replace('txtCK', {
+            language: 'vi',
+            filebrowserImageBrowseUrl: '../lib/ckfinder/ckfinder.html?type=Images',
+            filebrowserFlashBrowseUrl: '../lib/ckfinder/ckfinder.html?type=Flash',
+        });
+        $('#form-test').submit(function () {
+            console.log('run');
+            //$('textarea[name="txtCK"]').val(editor.getData());
+            $('.text-temp').val(editor.getData());
+        });
+            //$('textarea[name="txtCK"]').val('aaa');
+    </script>
+}

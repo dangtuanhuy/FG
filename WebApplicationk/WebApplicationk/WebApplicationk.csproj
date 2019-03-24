@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-WebApplicationk-FFA7B808-4490-4444-B342-9F3FF3F0CD72</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.Plugin.DiskQuota\CKFinder.Connector.Plugin.DiskQuota.csproj" />
+    <None Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.Plugin.GetFileInfo\CKFinder.Connector.Plugin.GetFileInfo.csproj" />
+    <None Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.Plugin.UserActionsLogger\CKFinder.Connector.Plugin.UserActionsLogger.csproj" />
+    <None Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.Plugin.Watermark\CKFinder.Connector.Plugin.Watermark.csproj" />
+    <None Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.WebApp\CKFinder.Connector.WebApp.csproj" />
+    <None Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.WebApp\CKFinder.Connector.WebApp.csproj.user" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\ckfinder\App_Data\" />
+    <Folder Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.Plugin.DiskQuota\bin\Debug\" />
+    <Folder Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.Plugin.DiskQuota\obj\Debug\" />
+    <Folder Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.Plugin.GetFileInfo\bin\Debug\" />
+    <Folder Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.Plugin.GetFileInfo\obj\Debug\" />
+    <Folder Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.Plugin.UserActionsLogger\bin\Debug\" />
+    <Folder Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.Plugin.UserActionsLogger\obj\Debug\" />
+    <Folder Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.Plugin.Watermark\bin\Debug\" />
+    <Folder Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.Plugin.Watermark\obj\Debug\" />
+    <Folder Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.WebApp\bin\" />
+    <Folder Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.WebApp\obj\Debug\" />
+    <Folder Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.WebApp\Properties\PublishProfiles\" />
+    <Folder Include="wwwroot\lib\ckfinder\src\CKFinder.Connector.WebApp\userfiles\" />
+    <Folder Include="wwwroot\lib\ckfinder\userfiles\" />
+  </ItemGroup>
+
+</Project>
